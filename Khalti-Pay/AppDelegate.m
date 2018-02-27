@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Khalti-Swift.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    Khalti.shared.appUrlScheme = KhaltiAppScheme;
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    Khalti.shared.appUrlScheme = KhaltiAppScheme;
     return YES;
 }
 

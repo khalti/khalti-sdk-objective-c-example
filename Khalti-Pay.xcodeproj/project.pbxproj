@@ -13,6 +13,7 @@
 		6E3B26C720451EF1002BD80C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E3B26C620451EF1002BD80C /* Assets.xcassets */; };
 		6E3B26CA20451EF1002BD80C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E3B26C820451EF1002BD80C /* LaunchScreen.storyboard */; };
 		6E3B26CD20451EF1002BD80C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E3B26CC20451EF1002BD80C /* main.m */; };
+		AFD32B2DAF339599CDD67CD4 /* Pods_Khalti_Pay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBC680474AC131989054B8AA /* Pods_Khalti_Pay.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		6E3B26C920451EF1002BD80C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E3B26CB20451EF1002BD80C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E3B26CC20451EF1002BD80C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B1657DBA96E41E576057E982 /* Pods-Khalti-Pay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Khalti-Pay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Khalti-Pay/Pods-Khalti-Pay.debug.xcconfig"; sourceTree = "<group>"; };
+		E503DB0775F1B3A828A21FEE /* Pods-Khalti-Pay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Khalti-Pay.release.xcconfig"; path = "Pods/Target Support Files/Pods-Khalti-Pay/Pods-Khalti-Pay.release.xcconfig"; sourceTree = "<group>"; };
+		FBC680474AC131989054B8AA /* Pods_Khalti_Pay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Khalti_Pay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFD32B2DAF339599CDD67CD4 /* Pods_Khalti_Pay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4FE717278377C03FB734E5BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FBC680474AC131989054B8AA /* Pods_Khalti_Pay.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6E3B26B120451EF1002BD80C = {
 			isa = PBXGroup;
 			children = (
 				6E3B26BC20451EF1002BD80C /* Khalti-Pay */,
 				6E3B26BB20451EF1002BD80C /* Products */,
+				AF329F99C4440E6A66F94502 /* Pods */,
+				4FE717278377C03FB734E5BE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +86,15 @@
 			path = "Khalti-Pay";
 			sourceTree = "<group>";
 		};
+		AF329F99C4440E6A66F94502 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B1657DBA96E41E576057E982 /* Pods-Khalti-Pay.debug.xcconfig */,
+				E503DB0775F1B3A828A21FEE /* Pods-Khalti-Pay.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,9 +102,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6E3B26D020451EF1002BD80C /* Build configuration list for PBXNativeTarget "Khalti-Pay" */;
 			buildPhases = (
+				C1ED0198ABCD992CB3BBB400 /* [CP] Check Pods Manifest.lock */,
 				6E3B26B620451EF1002BD80C /* Sources */,
 				6E3B26B720451EF1002BD80C /* Frameworks */,
 				6E3B26B820451EF1002BD80C /* Resources */,
+				1E27864EDFFE872B07F583DD /* [CP] Embed Pods Frameworks */,
+				E6E42D4D5A194D2068FDEF81 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,6 +163,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E27864EDFFE872B07F583DD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Khalti-Pay/Pods-Khalti-Pay-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Khalti/Khalti.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Khalti.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Khalti-Pay/Pods-Khalti-Pay-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1ED0198ABCD992CB3BBB400 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Khalti-Pay-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6E42D4D5A194D2068FDEF81 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Khalti-Pay/Pods-Khalti-Pay-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6E3B26B620451EF1002BD80C /* Sources */ = {
@@ -276,9 +359,12 @@
 		};
 		6E3B26D120451EF1002BD80C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1657DBA96E41E576057E982 /* Pods-Khalti-Pay.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = HW5PK5B369;
 				INFOPLIST_FILE = "Khalti-Pay/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -290,9 +376,12 @@
 		};
 		6E3B26D220451EF1002BD80C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E503DB0775F1B3A828A21FEE /* Pods-Khalti-Pay.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = HW5PK5B369;
 				INFOPLIST_FILE = "Khalti-Pay/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
