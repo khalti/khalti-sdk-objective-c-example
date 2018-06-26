@@ -64,7 +64,7 @@
     
     NSString * key = @"test_public_key_dc74e0fd57cb46cd93832aee0a507256";
     NSInteger *amount = 1000;
-    Config *config = [[Config alloc] initWithPublicKey:key amount:amount productId:@"123123" productName:@"Dragon_boss" productUrl:@"as" additionalData:additionalData];
+    Config *config = [[Config alloc] initWithPublicKey:key amount:amount productId:@"123123" productName:@"Dragon_boss" productUrl:@"as" additionalData:additionalData cardPayment:false];
     
     
     [Khalti presentWithCaller:self with:config delegate:self];
